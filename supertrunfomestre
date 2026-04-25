@@ -1,0 +1,139 @@
+#include <stdio.h>
+// Desafio Super Trunfo - Países
+// Tema 1 - Cadastro das cartas
+// Objetivo: No nível intermediario você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
+
+int main() {
+ // Área para definição das variáveis para armazenar as propriedades das cidades
+ char estado1[20];
+ char cdcarta1[4];
+ char nomcidad1[30];
+ unsigned long int populac1;
+ float area1;
+ float pib1;
+ int numpontturis1;
+ float densipop1;
+ float pibpercap1;
+
+  char estado2[20];
+ char cdcarta2[4];
+ char nomcidad2[30];
+ unsigned long int populac2;
+ float area2;
+ float pib2;
+ int numpontturis2;
+ float densipop2;
+ float pibpercap2;
+
+ unsigned long int sompopul;
+ float somarea;
+ float sompib;
+ float somnumpont;
+ float sompibpercap;
+ float somdensipop;
+
+
+// Área para entrada de dados
+    printf("Digite os dados do primeiro cartão\n");
+
+    printf("Digite sua estado: ");
+    scanf(" %s", estado1);
+
+    printf("Digite o Codigo da Carta:  ");
+    scanf(" %s", cdcarta1);
+
+    printf("Digite o nome da Cidade: ");
+    scanf(" %s", nomcidad1);
+
+    printf("Digite quantidade de População na cidade: ");
+    scanf(" %d" , &populac1);
+
+    printf("Digite o tamanho da cidade : ");
+    scanf(" %f", &area1);
+
+    printf("Digite o PIB da cidade : ");
+    scanf(" %f", &pib1);
+    
+    printf("Digite o Numero de Pontos turisticos da cidade : ");
+    scanf(" %d", &numpontturis1);
+    densipop1 = (float)(populac1 / area1);
+    pibpercap1 = (float)(populac1 / pib1);
+
+    printf("Digite os dados do Segundo cartão\n");
+
+    printf("Digite sua estado: ");
+    scanf(" %s", estado2);
+
+    printf("Digite o Codigo da Carta:  ");
+    scanf(" %s", cdcarta2);
+
+    printf("Digite o nome da Cidade: ");
+    scanf(" %s", nomcidad2);
+
+    printf("Digite quantidade de População na cidade: ");
+    scanf(" %d" , &populac2);
+
+    printf("Digite o tamanho da cidade : ");
+    scanf(" %f", &area2);
+
+    printf("Digite o PIB da cidade : ");
+    scanf(" %f", &pib2);
+    
+    printf("Digite o Numero de Pontos turisticos da cidade : ");
+    scanf(" %d", &numpontturis2);
+    densipop2 = (float)(populac2 / area2);
+    pibpercap2 = (float)(populac2 / pib2);
+    printf("\n");
+    printf("\n");
+    // Área para exibição dos dados da cidade
+    printf("Abaixo as informações do cartão 1\n");
+    printf("O estado é : %s\n", estado1);
+    printf("O Codigo da carta é  %s\n", cdcarta1);
+    printf("O nome da cidade é : %s\n", nomcidad1);
+    printf("A Quantidade da população da cidade é : %d\n", populac1);
+    printf("O tamanho da cidade em km : %f\n", area1);
+    printf("O PIB da cidade é : %f\n", pib1);
+    printf("O número de pontos turisticos é : %d\n", numpontturis1);
+    printf("A densidade populacional e : %.3f\n", densipop1);
+    printf("O PIB per Capita e : %.3f\n", pibpercap1);
+    printf("\n");
+    printf("\n");
+// Área para exibição dos dados da cidade
+    printf("Abaixo as informações do cartão 2\n");
+    printf("O estado é : %s\n", estado2);
+    printf("O Codigo da carta é  %s\n", cdcarta2);
+    printf("O nome da cidade é : %s\n", nomcidad2);
+    printf("A Quantidade da população da cidade é : %d\n", populac2);
+    printf("O tamanho da cidade em km : %f\n", area2);
+    printf("O PIB da cidade é : %f\n", pib2);
+    printf("O número de pontos turisticos é : %d\n", numpontturis2);
+    printf("A densidade populacional e : %.3f\n", densipop2);
+    printf("O PIB per Capita e : %.3f\n", pibpercap2);
+    printf("\n");
+    printf("\n");
+    //Soma das informações
+    sompopul = (float)(populac2 / area2);
+    somarea = (float)(populac2 / pib2);
+    somdensipop = (float)(populac2 / area2);
+    somnumpont = (float)(populac2 / pib2);
+    sompib= (float)(populac2 / area2);
+    sompibpercap = (float)(populac2 / pib2);
+    printf("Abaixo a soma da informações das cartas \n");
+    printf("A Quantidade da população das cidade é : %d\n", sompopul);
+    printf("O tamanho total das cidades em km : %f\n", somarea);
+    printf("O PIB da cidade é : %f\n", sompib);
+    printf("O número de pontos turisticos é : %d\n", somnumpont);
+    printf("A densidade populacional e : %.3f\n", somdensipop);
+    printf("O PIB per Capita e : %.3f\n", sompibpercap);
+    printf("\n");
+    printf("\n");
+// qual o maior valor entre as cartas
+    printf("Abaixo a qual o valor maior entre as cartas \n");
+    printf("A maior população entre as cidades e : %d\n", populac1 > populac2);
+    printf("A maior cidade e : : %d\n", area1 > area2);
+    printf("O maior PIB entre as cidades e  : %d\n", pib1 > pib2);
+    printf("A  cidade com quantidade maior de pontos turisticos e : %d\n", numpontturis1 > numpontturis2);
+    printf("a cidade que tem maior dencidade por população e : %d\n", densipop1 > densipop2);
+    printf("O PIB per Capita entre as cidades e : %d\n", pibpercap1 > pibpercap2);
+return 0;
+} 
